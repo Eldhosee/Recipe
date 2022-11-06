@@ -1,0 +1,14 @@
+@import url("https://fonts.googleapis.com/css?family=Audiowide|Sofia|Trirong" );
+.main{
+    padding:1%;
+    background: black;
+}
+.h2{
+    color: #ffffff;
+    font-size: 30px;
+    font-family: "Trirong", serif;
+}
+.content{
+    height: 100px;
+    box-sizing:border-box;
+}

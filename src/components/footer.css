@@ -1,0 +1,35 @@
+@import url("https://fonts.googleapis.com/css?family=Audiowide|Sofia|Trirong" );
+.footer{
+    background: #010101;
+    border:0;
+    color:aliceblue;
+    padding: 2% 0 2% 0;
+    font-size: 25px;
+    display: flex;
+    flex-direction: row;
+} 
+h4{
+    font-family: "Trirong", serif;
+    font-size: 50px;
+    
+} 
+.footer-l{
+    padding: 1%;
+    width: 50%;
+    margin: 2% 0 0 0;
+    box-sizing: border-box;
+    font-family: "Trirong", serif;
+}
+.footer-r{
+    width: 50%;
+    box-sizing: border-box;
+}
+.img{
+    margin-top: 1%;
+    width: 100%;
+}
+@media (max-width:753px){
+    .footer-l{
+        font-size: 30%;
+    }
+}
