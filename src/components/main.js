@@ -5,8 +5,9 @@ import CardMedia from '@mui/material/CardMedia';
 import Grid from '@mui/material/Grid';
 import { CardActionArea, CardContent, Typography} from '@mui/material';
 import './main.css'
+import Loader from './loader';
 
-function Recipe({query}) {
+function Recipe(props) {
     const [items, setItems] = useState([]);
     const options = {
         method: 'GET',
@@ -23,32 +24,42 @@ function Recipe({query}) {
                 .then(function (response) {
                     setItems(response.data.feed)
                 })
+                .then(props.changeLoading(1))
                 .catch(function (error) {
                     console.error(error);
                 });
     },[]);
     
   return (
+    <>
+    {props.loading==0?
+     <Loader/>
+    :
     <div>
+
         {
-          query?
+          props.query?
           <div>
-            {query.map(item=>(
+            {props.query.map(item=>(
               <ol>
                 <li>{item}</li>
               </ol>
             ))}
           </div>
           :
+          <div>
+         
+         
       <div className='main'>
       <div className='h2'>
         <h2>Recipe</h2>
       </div>
+      
           <Grid container spacing={1} olumns={{ xs: 4, sm: 8, md: 12 }}>
               { items.map((item)=>
-                {
-                  if(   item.display.source && item.display.source.sourceRecipeUrl)
-                  {
+                (
+                    item.display.source && item.display.source.sourceRecipeUrl)&&
+                  (
                     <Grid item xs={12} sm={6} md={4}>
                       <CardActionArea href={item.display.source.sourceRecipeUrl} >
                         <Card className='card' >
@@ -68,13 +79,19 @@ function Recipe({query}) {
                         </Card>
                       </CardActionArea>
                     </Grid>
-                  }
-                  console.log("not present")
-                })}
+                  
+              )
+             
+                )}
                 </Grid>
                 </div>
-        }   
+                
+                </div>
+        } 
+       
     </div>
+     } 
+    </>
   )
 }
 

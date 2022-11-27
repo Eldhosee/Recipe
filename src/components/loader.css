@@ -1,0 +1,15 @@
+.loader {
+    height: 10px;
+    position: fixed;
+    animation-name: loader;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+  }
+  
+  @keyframes loader {
+    0%   {background-color:red; width: 1%;}
+    25%  {background-color:yellow; width:25%;}
+    50%  {background-color:blue; width:50%; }
+    75%  {background-color:rgb(0, 251, 255); width:100%;}
+    100% {background-color:red; width:1%;}
+  }
