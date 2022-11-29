@@ -23,8 +23,9 @@ function Recipe(props) {
                 axios.request(options)
                 .then(function (response) {
                     setItems(response.data.feed)
+                    props.changeLoading(1)
                 })
-                .then(props.changeLoading(1))
+               
                 .catch(function (error) {
                     console.error(error);
                 });

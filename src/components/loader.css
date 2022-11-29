@@ -1,6 +1,6 @@
 .loader {
     height: 10px;
-    position: fixed;
+    position:relative;
     animation-name: loader;
     animation-duration: 4s;
     animation-iteration-count: infinite;
