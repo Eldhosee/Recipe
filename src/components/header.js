@@ -24,11 +24,11 @@ const Header=(props)=>{
                 }
                 /> 
                 <input type='button' className="submit" value="Search" 
-                onClick={()=>
+                onClick={()=>{
                
                 search(searchTerm)
-                
-                }/>
+                setSearchTerm('')
+                          }}/>
                 
             </div>
             

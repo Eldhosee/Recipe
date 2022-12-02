@@ -1,7 +1,6 @@
 import axios from "axios";
 import React from "react";
 import { useState, useEffect } from "react";
-import Recipe from "./main";
 const Search=(props)=>{
     console.log(props.query+"entered")
 const [searchItem ,setSearchItem]=useState([]);
@@ -10,7 +9,7 @@ const options = {
   url: 'https://yummly2.p.rapidapi.com/feeds/auto-complete',
   params:{q: props.query},
   headers: {
-    'X-RapidAPI-Key': process.env.REACT_APP__KEY,
+    'X-RapidAPI-Key': '0fb3574a43msh1599ef89a74c382p135cbfjsn5c4e0195b16d',
     'X-RapidAPI-Host': 'yummly2.p.rapidapi.com'
   }
 };

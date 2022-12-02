@@ -21,6 +21,7 @@ h4{
     font-family: "Trirong", serif;
 }
 .footer-r{
+    
     width: 50%;
     box-sizing: border-box;
 }
@@ -31,5 +32,8 @@ h4{
 @media (max-width:753px){
     .footer-l{
         font-size: 30%;
+    }
+    .footer-r{
+        margin-top: 43%;
     }
 }
