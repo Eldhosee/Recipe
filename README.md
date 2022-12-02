@@ -1,5 +1,5 @@
 ## Demo
-https://recipie11.netlify.app/
+https://recipe111.netlify.app
 
 ## Screenshots
 
