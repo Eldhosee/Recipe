@@ -14,7 +14,7 @@ function Recipe(props) {
         url: 'https://yummly2.p.rapidapi.com/feeds/list',
         params: {limit: '24', start: '0'},
         headers: {
-          'X-RapidAPI-Key':process.env.REACT_APP__KEY,
+          'X-RapidAPI-Key':'0fb3574a43msh1599ef89a74c382p135cbfjsn5c4e0195b16d',
           'X-RapidAPI-Host': 'yummly2.p.rapidapi.com'
         }
       };
